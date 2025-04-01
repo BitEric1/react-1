@@ -9,7 +9,7 @@ function Header() {
                     <div className="flex">
                         <a href="#!" className="flex items-end">
                             <h2 className="text-4xl text-[#001858] font-semibold ">
-                                Dasteen
+                                BitEric
                             </h2>
                             <p className="text-lg text-[#6246EA] font-bold">
                                 .Blog

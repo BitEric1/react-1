@@ -9,6 +9,15 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1270px;
     margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;    
+}
+
+button:hover {
+    opacity: 0.9;
 }
