@@ -1,6 +1,6 @@
-import "./App.css";
 import React from "react";
 import List from "./List";
+import ModalHeader from "./Modal";
 
 function Hero() {
     return (
@@ -219,6 +219,7 @@ function App() {
             <Tech />
             <List />
             <Contact />
+            {/* <ModalHeader /> */}
         </>
     );
 }

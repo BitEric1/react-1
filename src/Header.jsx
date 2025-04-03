@@ -1,5 +1,45 @@
-import "./Header.css";
 import React from "react";
+import { useState } from "react";
+
+function HeaderButton() {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <>
+            <button
+                className="flex items-center gap-[10px] ml-[50px] bg-[#6246EA] py-[10px] px-[17px] rounded-sm text-xl font-bold text-white capitalize"
+                onClick={() => setIsOpen(true)}
+            >
+                <img src="/coffe.svg" alt="" />
+                Buy Me a Coffee
+            </button>
+            {isOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                    <div className="relative bg-white p-5 rounded-2xl shadow-lg w-lg h-[512px] p-8">
+                        <button
+                            className="absolute right-8 top-8 bg-black/5 w-10 h-10 rounded-full text-2xl font-bold flex items-center justify-center"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            <img className="w-6 h-6" src="/close.svg" alt="" />
+                        </button>
+                        <div className=" rounded-full mt-14 mx-auto flex justify-center">
+                            <img
+                                className="w-[300x] h-[300px] object-cover"
+                                src="/qr.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="mt-5 px-4 py-2 text-white bg-black rounded bg-amber-800 w-40 h-14 text-2xl font-bold flex items-center justify-center ml-auto mr-auto hover:bg-[#5ebbff]"
+                        >
+                            Thanks
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+}
 
 function Header() {
     return (
@@ -51,10 +91,7 @@ function Header() {
                                 Search
                             </p>
                         </div>
-                        <button className="flex items-center gap-[10px] ml-[50px] bg-[#6246EA] py-[10px] px-[17px] rounded-sm text-xl font-bold text-white capitalize">
-                            <img src="/coffe.svg" alt="" />
-                            Buy Me a Coffee
-                        </button>
+                        <HeaderButton />
                     </div>
                 </div>
             </div>
